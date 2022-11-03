@@ -30,7 +30,7 @@ export const Card: React.FC<CardProps> = ({ logo, form, company, linkToSite, add
   return (
     <article className="vacancy">
       <div className="vacancy__employer employer">
-        <img src={Boolean(logo) ? logo : "/No-logo.png"} alt={company + "logo"} className="employer__logo" />
+        <img src={Boolean(logo) ? logo : "./No-logo.png"} alt={company + " logo"} className="employer__logo" />
         <ul className="employer__description">
           <li className="employer__item"><span>Form:</span>&nbsp;{form}</li>
           <li className="employer__item">

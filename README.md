@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# Тестовое задание
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ссылка на макет: https://www.figma.com/file/cfN8wAJpGJ7aQD8LD5ZpgT/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5?node-id=0%3A1
+ССылка на текст задания: https://disk.yandex.ru/i/KHZxlsQf1hnCzw
 
-## Available Scripts
+# Пару слов о проделанной работе
+## Верстка
+По макету было пару вопросов и если бы это была таска внутри фирмы, то я бы подошел к дизайнеру.
+Старался делать pixelperfect, но из-за некоторых неточностей не все получилось и я его забросил после откладки карточки. Так что в верстке могут быть промашки относительно макета, т.к. нет времени проверить это.
 
-In the project directory, you can run:
+Требования по БЭМ спутало карты. Мне привычней scss-modules. Поэтому стили вынесены в отдельную папку и не лежат рядом с компонентами.
 
-### `npm start`
+## Работа с API
+Хоть и в тз было сказано, что данные на карточках могут не найтись в АПИ, но я нашел. Мое мнение о том, как я нашел - плохая практика (Promise.all от мапы). Съедать столько трафика у пользователя - грех.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Адаптив
+Я старался, вроде бы получилось.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Есть кое-что, что я бы посчитал косяком, но если ничего такого не заметите, значит ничего критичного.
 
-### `npm test`
+## Форма
+Просто наивная реализация формы.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Работа с гит
+Я умею работать с гит. Просто поленился. Я порядочный человек и умею делать ветвление, мержи и атомарные коммиты, честно-честно.
 
-### `npm run build`
+## State manager
+Использовал Redux, т.к. хотел попрактиковаться.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Только практиковался не с ванильным, а с ReduxToolkit.

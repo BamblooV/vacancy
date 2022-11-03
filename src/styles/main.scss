@@ -1,0 +1,83 @@
+// Подклюаем шрифты
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap");
+$Robotofamily: "Roboto", sans-serif;
+$Rubikfamily: "Rubik", sans-serif;
+
+// Иконочные шрифты
+@import url("../assets/fonts/icomoon/style.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: $Rubikfamily;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  font-family: $Rubikfamily;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.btn:disabled {
+  color: #a3a6a9;
+  cursor: not-allowed;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 24px;
+  padding-top: 81px;
+  padding-bottom: 94px;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+  }
+}
+
+.wrapper {
+  grid-column: 1 / -1;
+
+  @media screen and (min-width: 1024px) {
+    grid-column: 2 /12;
+  }
+}
+
+.vacancies {
+  margin-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 90px;
+  }
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.1875;
+
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+@import "control";
+
+@import "vacancy";
+
+@import "feedback";

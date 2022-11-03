@@ -1,0 +1,35 @@
+.control__input {
+  padding: 0;
+  padding-bottom: 8px;
+  font-family: $Rubikfamily;
+  font-size: 16px;
+  line-height: 16;
+  max-height: 37px;
+  max-width: 468px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  position: relative;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.error-message {
+  position: absolute;
+  margin: 0;
+  margin-top: 5px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  appearance: none;
+}
+
+.control__input_invalid {
+  border-bottom: 1px solid red;
+}

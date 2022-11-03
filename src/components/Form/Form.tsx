@@ -14,7 +14,8 @@ const Form = () => {
     (value: string) => {
 
       if (value.length === 0) {
-        setMailError("Поле обязательно к заполнению");
+        setNameError("Поле обязательно к заполнению");
+        return
       }
 
       if (value.length > 3) {
@@ -31,6 +32,7 @@ const Form = () => {
 
       if (value.length === 0) {
         setMailError("Поле обязательно к заполнению");
+        return
       }
 
       if (value.toLowerCase().match(re)) {
@@ -47,6 +49,7 @@ const Form = () => {
 
       if (value.length === 0) {
         setTelError("Поле обязательно к заполнению");
+        return
       }
 
       if (value.match(re)) {

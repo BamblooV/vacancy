@@ -46,13 +46,13 @@ const Form = () => {
       const re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
 
       if (value.length === 0) {
-        setMailError("Поле обязательно к заполнению");
+        setTelError("Поле обязательно к заполнению");
       }
 
       if (value.match(re)) {
-        setMailError("");
+        setTelError("");
       } else {
-        setMailError("Нужно вводить номер телефона");
+        setTelError("Нужно вводить номер телефона");
       }
 
     },

@@ -123,7 +123,7 @@ const Form = () => {
       />
       <RectangularButton type="submit" onClick={submitHandler} text={'Send'} />
       <p className="agreement">
-        By clicking "Send" you confirm your consent to the
+        By clicking "Send" you confirm your consent to the &nbsp;
         <a href="#">processing of personal data</a>
       </p>
     </form>

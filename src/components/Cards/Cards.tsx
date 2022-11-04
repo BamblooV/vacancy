@@ -41,10 +41,10 @@ export const Cards = () => {
   return (
     <>
       {filteredVacancies.slice(0, numberToRendered).map(item => (
-        <Card logo={item.logo?.original} form={item.schedule.name} company={item.company} linkToSite={item.linkToSite} address={item.address} jobName={item.jobName} description={item.description} />
+        <Card key={item.id} logo={item.logo?.original} form={item.schedule.name} company={item.company} linkToSite={item.linkToSite} address={item.address} jobName={item.jobName} description={item.description} />
       ))}
 
-      {filteredVacancies.length > numberToRendered && <RectangularButton onClick={showMore} text='Показать еще вакансии' />}
+      {filteredVacancies.length > numberToRendered && <RectangularButton onClick={showMore} text='Show more vacancies' />}
     </>
   )
 }

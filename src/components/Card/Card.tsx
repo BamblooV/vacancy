@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 
 export type CardProps = {
@@ -16,6 +16,7 @@ export type CardProps = {
 export const Card: React.FC<CardProps> = ({ logo, form, company, linkToSite, address, jobName, description }) => {
 
   const [isClosed, setIsClosed] = useState<Boolean>(true);
+
   const openHandler = () => {
     setIsClosed(prev => !prev);
   }
@@ -27,8 +28,19 @@ export const Card: React.FC<CardProps> = ({ logo, form, company, linkToSite, add
     ref.current.innerHTML = description;
   }, [ref.current])
 
+  const onCloseScroll = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const targetElem = e.target as HTMLElement;
+
+    if (targetElem.textContent === 'close' && targetElem.tagName === 'BUTTON') {
+      if (e.currentTarget.offsetTop < window.scrollY) {
+        window.scroll({ top: e.currentTarget.offsetTop, behavior: 'smooth' });
+      }
+    }
+
+  }, []);
+
   return (
-    <article className="vacancy">
+    <article onClick={onCloseScroll} className="vacancy">
       <div className="vacancy__employer employer">
         <img src={Boolean(logo) ? logo : "./No-logo.png"} alt={company + " logo"} className="employer__logo" />
         <ul className="employer__description">
